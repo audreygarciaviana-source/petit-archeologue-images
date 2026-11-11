@@ -4,7 +4,7 @@ window.applyVogue = async (POST, opt = {}) => {
   const S = ms => new Promise(r => setTimeout(r, ms));
   const RAW = 'https://raw.githubusercontent.com/audreygarciaviana-source/petit-archeologue-images/';
   for (let i = 0; i < 40 && !document.querySelector('.tiptap.ProseMirror'); i++) await S(1000);
-  await S(2500);
+  await S(1500);
   const pm = document.querySelector('.tiptap.ProseMirror'); const ed = pm.editor;
   const man = await fetch(RAW + opt.commit + '/payload/manifest.json').then(r => r.json());
   const ops = man[POST]; if (!ops) return { err: 'no ops' };
@@ -57,13 +57,13 @@ window.applyVogue = async (POST, opt = {}) => {
     else tr = tr.insert(a.pos, a.node);
   }
   ed.view.dispatch(tr);
-  await S(3000);
+  await S(1500);
   let n = 0; ed.state.doc.descendants(x => { if (x.type.name === 'IMAGE' && (x.attrs.altText || '').startsWith(MARK)) n++; });
   let pub = 'nopub';
   if (opt.publish && missingMedia.length === 0) {
-    await S(2500);
+    await S(1500);
     const b = [...document.querySelectorAll('button')].find(x => /^(Mettre à jour|Publier)$/.test(x.innerText.trim()));
-    if (b) { b.click(); await S(9000); pub = 'clicked:' + b.innerText.trim(); } else pub = 'nobutton';
+    if (b) { pub = 'clicked:' + b.innerText.trim(); b.click(); } else pub = 'nobutton';
   }
   return { inserted: n, acts: acts.length, missing, missingMedia, pub };
 };
