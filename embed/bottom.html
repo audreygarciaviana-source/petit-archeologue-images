@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<base target="_top">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+<style>
+:root{--paper:#fff;--soft:#f4f3f1;--ink:#141414;--muted:#5c5c5c;--line:#e4e2de;--red:#c8231c;--f:"Archivo","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--f);font-size:18px;line-height:1.65;overflow-x:hidden}
+a{color:inherit}img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.cap{font-stretch:75%;font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+.kicker{display:inline-block;font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+h1,h2,h3{text-wrap:balance;margin:0}
+main{display:grid;gap:64px}.pt{padding-top:88px}.pb{padding-bottom:56px}html,body{overflow:hidden}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.tile{position:relative;display:grid;color:#fff;text-decoration:none;overflow:hidden;background:var(--ink)}
+.tile .inner{position:relative;z-index:1;padding:30px;display:grid;gap:10px;align-content:start}
+.tile h2{font-size:2.6rem}
+.tile p{margin:0;color:#e8e8e8}.tile .kicker,.tile .more{color:#fff}
+.more{font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+.tile.photo{grid-template-rows:auto 1fr}
+.tile.photo .ph{position:relative;aspect-ratio:16/9;overflow:hidden;background:#222}
+.tile.photo .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;transition:transform .5s ease}
+.tile.photo:hover .ph img{transform:scale(1.04)}
+.tile.photo .kicker{color:#fff;background:var(--red);padding:5px 9px;justify-self:start}
+.tile.book{background:#f0e7d6;color:var(--ink);align-items:center}
+.tile.book .inner{grid-template-columns:170px 1fr;align-items:center;gap:22px}
+.cover{width:170px;height:auto;aspect-ratio:400/517;object-fit:cover;box-shadow:0 12px 28px rgba(0,0,0,.28);transform:rotate(-2deg);transition:transform .3s}.tile.book:hover .cover{transform:rotate(0) scale(1.03)}
+.tile.book p{color:var(--ink)}.tile.book .kicker,.tile.book .more{color:var(--red)}
+@media (max-width:900px){.duo{grid-template-columns:1fr;gap:24px}}
+@media (max-width:620px){.cap{overflow-wrap:break-word;hyphens:auto}.tile .inner{padding:22px}.tile h2{font-size:1.9rem}.tile.photo .ph{aspect-ratio:4/3}.tile.book .inner{grid-template-columns:1fr;justify-items:start;gap:18px}.tile.book .cover{width:150px}}
+</style></head><body><main class="pb">
+<div class="wrap duo">
+<a class="tile photo" href="https://www.lepetitarcheologue.com/groups">
+<div class="ph"><img src="https://static.wixstatic.com/media/391818_7fde77e061e545b7bb16252fb32fa9b7~mv2.jpg/v1/fill/w_1000,h_750,al_c,q_80/img.jpg" alt="Le Grand Sphinx de Gizeh devant une pyramide"></div>
+<div class="inner">
+<span class="kicker">Communauté</span>
+<h2 class="cap">Rejoignez les enquêteurs</h2>
+<p>Partagez vos théories, vos lectures et vos découvertes avec d'autres passionnés. Inscription gratuite, chaque membre est validé.</p>
+<span class="more">Rejoindre →</span>
+</div>
+</a>
+<a class="tile book" href="https://www.amazon.fr/dp/B0HQGJKVNJ" target="_blank" rel="noopener">
+<div class="inner">
+<img class="cover" src="https://m.media-amazon.com/images/I/81GGENuhspL._SL800_.jpg" alt="Couverture du livre de coloriage Les secrets de l'archéologie oubliée, par Le petit archéologue" width="400" height="517">
+<div style="display:grid;gap:10px">
+<span class="kicker">Mon livre</span>
+<h2 class="cap">Les secrets de l'archéologie oubliée</h2>
+<p>Un tour du monde de 25 sites mystérieux : Pyramides, Stonehenge, Machu Picchu… 25 coloriages et fiches illustrées. Un livre de coloriage pour adultes.</p>
+<span class="more">Commander sur Amazon →</span>
+</div>
+</div>
+</a>
+</div>
+</main></body></html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<base target="_top">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap">
+<style>
+:root{--paper:#fff;--soft:#f4f3f1;--ink:#141414;--muted:#5c5c5c;--line:#e4e2de;--red:#c8231c;--f:"Archivo","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--f);font-size:18px;line-height:1.65;overflow-x:hidden}
+a{color:inherit}img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.cap{font-stretch:75%;font-weight:800;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+.kicker{display:inline-block;font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+h1,h2,h3{text-wrap:balance;margin:0}
+main{display:grid;gap:64px}.pt{padding-top:88px}.pb{padding-bottom:56px}html,body{overflow:hidden}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.tile{position:relative;display:grid;color:#fff;text-decoration:none;overflow:hidden;background:var(--ink)}
+.tile .inner{position:relative;z-index:1;padding:30px;display:grid;gap:10px;align-content:start}
+.tile h2{font-size:2.6rem}
+.tile p{margin:0;color:#e8e8e8}.tile .kicker,.tile .more{color:#fff}
+.more{font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
+.tile.photo{grid-template-rows:auto 1fr}
+.tile.photo .ph{position:relative;aspect-ratio:16/9;overflow:hidden;background:#222}
+.tile.photo .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;transition:transform .5s ease}
+.tile.photo:hover .ph img{transform:scale(1.04)}
+.tile.photo .kicker{color:#fff;background:var(--red);padding:5px 9px;justify-self:start}
+.tile.book{background:#f0e7d6;color:var(--ink);align-items:center}
+.tile.book .inner{grid-template-columns:170px 1fr;align-items:center;gap:22px}
+.cover{width:170px;height:auto;aspect-ratio:400/517;object-fit:cover;box-shadow:0 12px 28px rgba(0,0,0,.28);transform:rotate(-2deg);transition:transform .3s}.tile.book:hover .cover{transform:rotate(0) scale(1.03)}
+.tile.book p{color:var(--ink)}.tile.book .kicker,.tile.book .more{color:var(--red)}
+@media (max-width:900px){.duo{grid-template-columns:1fr;gap:24px}}
+@media (max-width:620px){.cap{overflow-wrap:break-word;hyphens:auto}.tile .inner{padding:22px}.tile h2{font-size:1.9rem}.tile.photo .ph{aspect-ratio:4/3}.tile.book .inner{grid-template-columns:1fr;justify-items:start;gap:18px}.tile.book .cover{width:150px}}
+
+.lv{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:center;padding-top:72px}
+.lv .cov{width:100%;height:auto;aspect-ratio:400/517;object-fit:cover;box-shadow:0 18px 40px rgba(0,0,0,.25);transform:rotate(-2deg)}
+.lv .txt{display:grid;gap:18px}
+.lv h1{font-size:3.4rem}
+.lv p{margin:0;color:var(--muted)}
+.lv ul{margin:0;padding-left:1.1em;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--f);font-weight:800;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:15px 24px;background:var(--red);color:#fff;border:2px solid var(--red);justify-self:start}
+.btn:hover{background:#a91b15;border-color:#a91b15}
+.head{padding-bottom:14px;border-bottom:3px solid var(--ink)}
+.head h2{font-size:2.7rem}
+@media (max-width:760px){.lv{grid-template-columns:1fr;gap:30px;padding-top:40px}.lv .cov{width:210px}.lv h1{font-size:2.3rem}.head h2{font-size:2rem}}
+</style></head><body><main class="pb">
+<div class="wrap">
+<div class="head"><h2 class="cap">Les livres</h2></div>
+<div class="lv">
+<img class="cov" src="https://m.media-amazon.com/images/I/81GGENuhspL._SL800_.jpg" alt="Couverture du livre de coloriage Les secrets de l'archéologie oubliée, par Le petit archéologue" width="400" height="517">
+<div class="txt">
+<span class="kicker">Livre de coloriage pour adultes</span>
+<h1 class="cap">Les secrets de l'archéologie oubliée</h1>
+<p>Un tour du monde de 25 sites mystérieux, des pyramides de Gizeh à Stonehenge en passant par Machu Picchu. Pour chaque site, un grand dessin à colorier et une fiche illustrée qui raconte ce que l'on sait, et ce qui reste à découvrir.</p>
+<ul><li>25 coloriages détaillés</li><li>25 fiches illustrées</li><li>Les grandes énigmes de l'archéologie, racontées simplement</li></ul>
+<a class="btn" href="https://www.amazon.fr/dp/B0HQGJKVNJ" target="_blank" rel="noopener">Commander sur Amazon</a>
+</div>
+</div>
+</div>
+</main></body></html>
