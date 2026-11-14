@@ -1,0 +1,44 @@
+
+.ed{--ink:#141414;--blue:#1F4E8C;--green:#2F6B4F;--soft:#F4F3F1;--line:#D6D2CA;--muted:#5C5C5C;background:#fff;color:var(--ink);padding:72px 0 80px}
+.ed .w{max-width:980px;margin:0 auto;padding:0 28px;display:flex;flex-direction:column;gap:24px}
+.ed .T{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;letter-spacing:-.015em}
+.ed .M{font-family:"IBM Plex Mono",monospace;font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:12px}
+.ed .B{font-family:"Noticia Text",Georgia,serif}
+.ed .pill{align-self:flex-start;color:var(--blue);border:1.5px solid var(--blue);border-radius:999px;padding:6px 14px;font-size:13px;letter-spacing:.14em}
+.ed h2{margin:0;font-size:76px;line-height:.98}
+.ed h2 span{color:var(--green)}
+.ed .lead{margin:0;font-size:22px;line-height:1.55;max-width:780px}
+.ed .rule{background:var(--soft);border-left:3px solid var(--green);border-radius:0 16px 16px 0;padding:20px 22px;display:flex;flex-direction:column;gap:8px}
+.ed .rule p,.ed .card p,.ed .meth p{margin:0;font-size:18px;line-height:1.6}
+.ed .tags{display:flex;gap:10px;flex-wrap:wrap;margin:0;padding:0;list-style:none}
+.ed .tags li{background:#E6ECF5;color:var(--blue);border-radius:999px;padding:7px 12px}
+.ed .note{margin:0;font-size:17px;line-height:1.6;color:var(--muted)}
+.ed .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ed .card{border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:12px;background:#fff}
+.ed .card.dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ed .card h3{margin:0;font-size:28px;line-height:1.1}
+.ed .k-g{color:var(--green)}.ed .card.dark .k-g{color:#9FD7B8}.ed .k-b{color:var(--blue)}
+.ed .meth{background:var(--blue);color:#fff;border-radius:18px;padding:22px 24px;display:flex;gap:18px;align-items:center}
+.ed .meth .M{color:#C9D8F0}
+.ed .sig{margin:4px 0 0;text-align:center;font-style:italic;font-size:23px;color:var(--green)}
+.ed .cta{display:flex;justify-content:center}
+.ed .btn2{font-family:"IBM Plex Mono",monospace;font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-size:13px;text-decoration:none;color:#fff;background:var(--green);border-radius:999px;padding:14px 24px}
+@media (max-width:700px){.ed{padding:48px 0 56px}.ed .w{padding:0 18px;gap:20px}.ed h2{font-size:46px}.ed .lead{font-size:19px}.ed .cards{grid-template-columns:1fr}.ed .card h3{font-size:24px}.ed .meth{flex-direction:column;align-items:flex-start}.ed .rule p,.ed .card p,.ed .meth p{font-size:17px}.ed .sig{font-size:20px}}
+
+@@@
+<section class="ed" aria-labelledby="ed-t"><svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="v-echo" viewBox="0 0 100 100"><path d="M8.0 80.0 L8.0 72.5 L11.2 72.5 L11.2 65.0 L14.5 65.0 L14.5 57.5 L17.8 57.5 L17.8 50.0 L21.0 50.0 L31.0 50.0 L34.2 50.0 L34.2 57.5 L37.5 57.5 L37.5 65.0 L40.8 65.0 L40.8 72.5 L44.0 72.5 L44.0 80.0 Z" transform="translate(3 3)" fill="#F5B731" stroke="none"></path><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8.0 80.0 L8.0 72.5 L11.2 72.5 L11.2 65.0 L14.5 65.0 L14.5 57.5 L17.8 57.5 L17.8 50.0 L21.0 50.0 L31.0 50.0 L34.2 50.0 L34.2 57.5 L37.5 57.5 L37.5 65.0 L40.8 65.0 L40.8 72.5 L44.0 72.5 L44.0 80.0 Z"></path><line x1="4" y1="80" x2="44" y2="80"></line></g><g fill="none" stroke-width="2.2" stroke-linecap="round"><path d="M50 50 A14 14 0 0 1 50 72" stroke="#EF6547"></path><path d="M58 42 A24 24 0 0 1 58 80" stroke="#EE93AE"></path><path d="M66 34 A34 34 0 0 1 66 88" stroke="#9A78D6"></path><path d="M76 28 A44 44 0 0 1 76 94" stroke="#3C6FDB"></path></g></symbol><symbol id="v-ovni" viewBox="0 0 100 100"><path d="M34 50 Q50 26 66 50 Z" transform="translate(4 4)" fill="#7CCBEB" stroke="none"></path><path d="M10 56 A40 11 0 0 0 90 56 A40 11 0 0 0 10 56 Z" transform="translate(4 4)" fill="#23A393" stroke="none"></path><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M34 50 Q50 26 66 50"></path><ellipse cx="50" cy="56" rx="40" ry="11"></ellipse></g><circle cx="30" cy="57" r="2.6" fill="#F5B731"></circle><circle cx="50" cy="60" r="2.6" fill="#EF6547"></circle><circle cx="70" cy="57" r="2.6" fill="#F5B731"></circle><path d="M38 70 L28 90 M62 70 L72 90" stroke="#F5B731" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 4"></path><polygon points="16.0,13.0 17.4,16.6 21.0,18.0 17.4,19.4 16.0,23.0 14.6,19.4 11.0,18.0 14.6,16.6" fill="#EE93AE" stroke="currentColor" stroke-width=".9" stroke-linejoin="round"></polygon><polygon points="86.0,18.0 87.1,20.9 90.0,22.0 87.1,23.1 86.0,26.0 84.9,23.1 82.0,22.0 84.9,20.9" fill="#F5B731" stroke="currentColor" stroke-width=".9" stroke-linejoin="round"></polygon></symbol><symbol id="v-balance" viewBox="0 0 100 100"><path d="M14 56 Q26 70 38 56 Z" transform="translate(0 0)" fill="#23A393" stroke="none"></path><path d="M62 46 Q74 60 86 46 Z" transform="translate(0 0)" fill="#EF6547" stroke="none"></path><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M50 14 V88 M34 88 H66"></path><path d="M24 26 L76 18"></path><path d="M24 26 L14 56 M24 26 L38 56 M76 18 L62 46 M76 18 L86 46"></path><path d="M14 56 Q26 70 38 56 Z M62 46 Q74 60 86 46 Z"></path></g><circle cx="50" cy="12" r="4" fill="#F5B731" stroke="currentColor" stroke-width="1.2"></circle></symbol></defs></svg><div class="w">
+<span class="M pill">Notre ligne éditoriale</span>
+<h2 id="ed-t" class="T">Les pierres <span>parlent.</span></h2>
+<p class="B lead">Des piliers de 10 tonnes dressés il y a 11 600 ans. Des pyramides sur tous les continents. Des blocs ajustés avec une précision que l’on peine encore à expliquer. Partout dans le monde, des sites anciens ne rentrent pas dans le récit qu’on nous enseigne.</p>
+<div class="rule"><span class="M k-g">Notre règle : les faits d’abord</span><p class="B">Les mesures, les datations, les traces laissées par l’outil. Pas les certitudes d’une discipline dont les grilles de lecture ont été posées il y a plus de 200 ans, quand on déchiffrait encore les hiéroglyphes à la bougie.</p></div>
+<ul class="tags M"><li>Lidar</li><li>Radar de sol</li><li>Imagerie par muons</li><li>Mesures acoustiques</li></ul>
+<p class="B note">Nous mettons en avant une archéologie qui ose les nouveaux outils. Chaque année, ils révèlent des salles cachées, des cités enfouies, des alignements oubliés.</p>
+<span class="M k-b" style="font-size:13px">Ce que nous explorons</span>
+<div class="cards">
+<div class="card"><svg width="64" height="64" style="display:block;flex-shrink:0;" aria-hidden="true"><use href="#v-echo"></use></svg><span class="M k-g">Piste 1</span><h3 class="T">Une civilisation oubliée</h3><p class="B">Nous jugeons plausible qu’une civilisation ancienne, aujourd’hui disparue, soit à l’origine de certains de ces sites fabuleux, avec des savoir-faire perdus : tailler et lever des blocs colossaux, et surtout maîtriser le son et l’acoustique.</p></div>
+<div class="card dark"><svg width="64" height="64" style="display:block;flex-shrink:0;color:#fff" aria-hidden="true"><use href="#v-ovni"></use></svg><span class="M k-g">Piste 2</span><h3 class="T">Une piste venue d’ailleurs</h3><p class="B">Ces réalisations sont si extraordinaires que nous n’excluons pas des connaissances transmises par des visiteurs extraterrestres. Nous enquêtons aussi sur la présence d’intelligences non humaines sur Terre. Le sujet n’est plus tabou : les États-Unis ont créé un bureau officiel pour enquêter sur les phénomènes aériens non identifiés, et des centaines de cas restent sans explication.</p></div>
+</div>
+<div class="meth"><svg width="56" height="56" style="display:block;flex-shrink:0;color:#fff" aria-hidden="true"><use href="#v-balance"></use></svg><div style="display:flex;flex-direction:column;gap:6px"><span class="M">Notre méthode</span><p class="B">Chaque dossier met côte à côte la version officielle et les pistes alternatives, schémas à l’appui. On ne tranche pas à votre place : on vous donne les pièces, vous jugez.</p></div></div>
+<p class="B sig">Les pierres parlent. Encore faut-il les écouter.</p>
+<div class="cta"><a class="btn2" href="https://www.lepetitarcheologue.com/post/ovnis-et-civilisations-anciennes-et-si-on-n-%C3%A9tait-pas-seuls">Lire notre parti pris en détail →</a></div>
+</div></section>
