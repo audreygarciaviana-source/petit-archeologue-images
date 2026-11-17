@@ -63,15 +63,15 @@ function draw(){ctx.clearRect(0,0,W,W);
  if(land){ctx.beginPath();path(land);ctx.fillStyle='#CDB582';ctx.fill();ctx.strokeStyle='#B89A5E';ctx.lineWidth=1;ctx.stroke();}
  ctx.beginPath();path({type:'Sphere'});ctx.strokeStyle='#A9873F';ctx.lineWidth=5;ctx.stroke();
  var t=Date.now()/1000;
- PINS.forEach(function(p,i){if(!vis(p))return;var xy=proj([p.lo,p.la]);var n=p.a.length,r=(n>1?11:8)+(i===hover||i===openI?3:0);
-  var ph=(t*0.6+i*0.37)%1;ctx.beginPath();ctx.arc(xy[0],xy[1],r+ph*18,0,7);ctx.fillStyle='rgba(169,135,63,'+(0.35*(1-ph))+')';ctx.fill();
-  ctx.beginPath();ctx.arc(xy[0],xy[1],r,0,7);ctx.fillStyle=(i===hover||i===openI)?'#2A2724':'#A9873F';ctx.fill();ctx.lineWidth=3;ctx.strokeStyle='#fff';ctx.stroke();
-  if(n>1){ctx.fillStyle='#fff';ctx.font='800 13px Manrope,Arial';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(String(n),xy[0],xy[1]+1);}
+ PINS.forEach(function(p,i){if(!vis(p))return;var xy=proj([p.lo,p.la]);var n=p.a.length,r=(n>1?20:14)+(i===hover||i===openI?4:0);
+  var ph=(t*0.6+i*0.37)%1;ctx.beginPath();ctx.arc(xy[0],xy[1],r+ph*30,0,7);ctx.fillStyle='rgba(169,135,63,'+(0.35*(1-ph))+')';ctx.fill();
+  ctx.beginPath();ctx.arc(xy[0],xy[1],r,0,7);ctx.fillStyle=(i===hover||i===openI)?'#2A2724':'#A9873F';ctx.fill();ctx.lineWidth=4;ctx.strokeStyle='#fff';ctx.stroke();
+  if(n>1){ctx.fillStyle='#fff';ctx.font='800 22px Manrope,Arial';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(String(n),xy[0],xy[1]+1);}
  });}
 function tick(){var now=Date.now();if(auto){var r=proj.rotate();proj.rotate([r[0]+(now-last)*0.006,r[1]]);}last=now;draw();if(openI>=0)place(openI);requestAnimationFrame(tick)}
 requestAnimationFrame(tick);
 function scale(){return cv.getBoundingClientRect().width/W}
-function hit(ev){var b=cv.getBoundingClientRect(),s=W/b.width,x=(ev.clientX-b.left)*s,y=(ev.clientY-b.top)*s,best=-1,bd=30;
+function hit(ev){var b=cv.getBoundingClientRect(),s=W/b.width,x=(ev.clientX-b.left)*s,y=(ev.clientY-b.top)*s,best=-1,bd=46;
  PINS.forEach(function(p,i){if(!vis(p))return;var xy=proj([p.lo,p.la]),d=Math.hypot(xy[0]-x,xy[1]-y);if(d<bd){bd=d;best=i}});return best}
 var drag=null,moved=false;
 cv.addEventListener('pointerdown',function(ev){drag={x:ev.clientX,y:ev.clientY,r:proj.rotate()};moved=false;auto=false;cv.classList.add('drag');cv.setPointerCapture(ev.pointerId)});
