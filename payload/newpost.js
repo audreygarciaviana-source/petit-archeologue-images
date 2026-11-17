@@ -15,7 +15,7 @@ const dt=new DataTransfer();dt.setData('text/html',h);dt.setData('text/plain','x
 const imgs=()=>{const r=[];pm.editor.state.doc.descendants((n,pos)=>{if(n.type.name==='IMAGE')r.push({pos,id:n.attrs.image&&n.attrs.image.src&&n.attrs.image.src.id,loading:n.attrs.loading});});return r;};
 for(const k of P.keys){window.__npst='img '+k;const para=[...pm.querySelectorAll('p')].find(x=>x.innerText.trim()==='§§'+k+'§§');if(!para){log.push(k+' noph');continue;}
  const before=new Set(imgs().map(x=>x.id));const sel=getSelection();const r=document.createRange();r.selectNodeContents(para);sel.removeAllRanges();sel.addRange(r);pm.focus();await S(200);document.execCommand('delete');await S(300);
- const isPng=B[k].type==='image/png';const d2=new DataTransfer();d2.items.add(new File([B[k]],P.slug+'-'+k.toLowerCase()+(isPng?'.png':'.jpg'),{type:isPng?'image/png':'image/jpeg'}));pm.dispatchEvent(new ClipboardEvent('paste',{clipboardData:d2,bubbles:true,cancelable:true}));
+ const src=P.imgs[k];const ext=/\.gif$/i.test(src)?'gif':/\.png$/i.test(src)?'png':'jpg';const mime={gif:'image/gif',png:'image/png',jpg:'image/jpeg'}[ext];const d2=new DataTransfer();d2.items.add(new File([B[k]],P.slug+'-'+k.toLowerCase()+'.'+ext,{type:mime}));pm.dispatchEvent(new ClipboardEvent('paste',{clipboardData:d2,bubbles:true,cancelable:true}));
  let got=null;for(let i=0;i<120;i++){await S(1000);const nw=imgs().filter(x=>!before.has(x.id)&&x.id&&!x.loading&&/~mv2/.test(x.id));if(nw.length){got=nw[0];break;}}
  if(!got){log.push(k+' TIMEOUT');continue;}
  const ed=pm.editor;const n=ed.state.doc.nodeAt(got.pos);ed.view.dispatch(ed.state.tr.setNodeMarkup(got.pos,null,{...n.attrs,altText:P.alts[k]}));await S(300);}
